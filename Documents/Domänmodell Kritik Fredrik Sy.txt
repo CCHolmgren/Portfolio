@@ -1,0 +1,20 @@
+Peer review till Fredik Sy
+==========================
+Domänmodell:
+------------
+Bra nämnda klasser som gör det lätt att förstå vad som hänger ihop med vad. Även bra och logiskt nämnda associationer.  
+Tydligt för någon som är insatt men kanske aningen svår att förstå för en domänexpert. 
+Jag kan föreställa mig att en person som inte är insatt kan ha svårt att förstå vad som pågår i vissa avseenden.  
+Upplägget är bra vilket gör det lätt att överblicka, vilket också hjälper förståelsen över modellen.
+
+Domänexpert
+--------------
+Det är en ganska simpel modell så den går antagligen att förstå för en domain expert, men kanske inte hänga med vad som modellen visar i alla avseenden.
+
+Svaga punkter
+------------
+Kan vara otydlig för någon som inte är jätteinsatt i domain modelling, men det är fullt möjligt att detta inte är ett problem alls utan motsatsen istället då det är väldigt svårt att sätta sig in i någon annans mer begränsade förståelse.
+
+Som en utvecklare, hade modellen hjälpt dig, varför/varför inte?
+---------------------------------------------------------
+Samtidigt som modellen är bra uppmålad och har bra klasser så finns det även också bra associationer vilket jag tror skulle hjälpa utvecklingen väldigt mycket. Man behöver inte anstränga sig för att förstå vad modellen visar utan man kan fokusera på det viktigare, klasserna och associationerna.
