@@ -1,0 +1,23 @@
+Domänmodellering - Workshop 1
+
+Peer review på Christoffer Holmgrens modell
+----------------------------------------------------------------
+Många av de viktigaste klasserna är med, även om jag kan tycka att det saknas några. Exempelvis saknas information om båtplats med tillhörande attribut. Information om vilken typ av båt som passar på vilken plats och vad platsen kostar.
+Det saknas också en klass för faktura till medlemmarna innehållande avgifter för medlemsskap och båtplatser.
+Namngivningen är ok. Klassen "Bild" tycker jag skulle vara ett attribut istället för en klass.
+Klassnamnet båtklubb kanske skulle passa bättre som rubrik än som klass?
+
+Det finns endast tre associationer. Inga multipliciteter finns angivna.
+
+Tyvärr uppfyller inte domänmodellen kraven för UML-notation.
+
+Det är är en överskådlig och lättläst modell.
+
+Om man skulle prata med klubbens sekreterare så tror jag att denne skulle sakna både båtplatser och fakturor.
+
+Ur utvecklarperspektiv saknar jag den information som jag skrivit om ovan. Eftersom domänmodellen dessutom inte är gjort med korrekt UML-notation så är jag tveksam till om den uppfyller kraven på godkänt. Tyvärr.
+
+Länk till modellen: https://github.com/ch222kv/Portfolio
+
+----------------------------------------------------------------
+Skrivet av Ulrika Falk, uf222ba

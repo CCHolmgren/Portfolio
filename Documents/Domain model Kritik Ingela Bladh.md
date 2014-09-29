@@ -1,0 +1,27 @@
+Peer review till Ingela Bladh
+=============================
+Domänmodell:
+-------------
+Ganska rörig, med mycket information som kanske inte behöver vara där. Mycket 1..* till 1 överallt.
+Domänexpert 
+--------------
+Jag tror att sekreteraren skulle förstå hur modellen fungerar då den är väldigt simpel och 	om man följer sträcken så är det logiskt hur allt hänger ihop.
+
+Starka punkter
+--------------
+Tydlighet  
+Bra associationer  
+Som utvecklare så hade modellen hjälpt mig då det mesta finns med och det är tydligt hur allt hänger ihop.  
+
+Svaga punkter
+------------
+Lite rörigt ibland, mycket 1..\* till 1 eller 1 till 1 där det kanske inte behövs. Man skulle ju vara försiktig med att sätta 1 till 1 och så 1 till \* då det inte alltid är nödvändigt. Till exempel så är det ganska logiskt att en båt enbart har en båtbeskrivning, och behöver således inte ha 1..\* till 1 eftersom det är uppenbart att det hänger ihop så. Eller att en båt ligger på en båtplats. Eftersom en båt enbart kan ligga på en plats är det uppenbart att det är 1 till 1 där också.  
+SJälva bilden gör det ganska svårt att se hur upplägget ligger till då den är mycket kompakt med mycket information på liten plats.  
+Ska det verkligen vara att Båtplatsbokningssystemet tar hänsyn till just 1 bokningshistorik? Här tycker jag att 1 till 1 verkar i motsatt riktning och gör det mer ologiskt. Eller Båtplatsbokningssystemet följer bokningsreglerna, eller att det alltid är 1 på båtplatsbokningssystemets sida, man kan ju hoppas att det enbart är ett system som bokar båtar och därför är det onödigt med detta också.  
+Båtplatsbokningssystem, inloggningsuppgifter, mycket långa ord och namnen på klasserna kanske kan vara lite händigare valda så att det inte blir så mycket text och rörighet  
+
+Som en utvecklare, hade modellen hjälpt dig, varför/varför inte?
+--------------------------------------------------------
+Rörigheten gör att det inte är det enklaste att följa med i vad som händer. Men när man väl har tagit sig förbi det så innehåller modellen tillräckligt mycket för att hjälpa utvecklingen.
+
+Modellen innehåller tillräckligt för att uppfylla kraven för betyg 3.
