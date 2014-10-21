@@ -1,0 +1,16 @@
+AddUserController->+CreateView: create
+CreateView-->AddUserController:
+AddUserController->+UserList: create
+UserList-->AddUserController: 
+AddUserController->CreateView: getFirstname()
+CreateView-->AddUserController:
+AddUserController->CreateView: getLastname()
+CreateView-->AddUserController:
+AddUserController->CreateView: getSSN()
+CreateView-->AddUserController:
+AddUserController->+User: create (Firstname, Lastname, SSN)
+User-->-AddUserController: 
+AddUserController->UserList: addUser(User)
+AddUserController->UserList: saveUsers()
+deactivate UserList
+AddUserController->CreateView: redirect()
