@@ -73,7 +73,6 @@ namespace BlackJack.model
             }
             return false;
         }
-
         public void Stand(NewCardListener ncl)
         {
             if (m_deck != null)
