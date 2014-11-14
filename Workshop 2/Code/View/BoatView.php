@@ -12,9 +12,10 @@ require_once(__ROOT__ . "/Model/MemberModel.php");
 class BoatView extends View{
     private $listmembersview;
     private $memberlist;
-    public function __construct(){
-        $this->listmembersview = new ListMembersView();
-        $this->memberlist = new MemberList();
+
+    public function __construct(ListmembersView $listMembersView,MemberList $memberList){
+        $this->listmembersview = $listMembersView;
+        $this->memberlist = $memberList;
     }
     public function getAddView(){
         $html = "

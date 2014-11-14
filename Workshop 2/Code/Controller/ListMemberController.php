@@ -12,21 +12,21 @@ class ListmemberController {
     private $view;
     private $memberList;
 
-    public function __construct($view = null){
-        $this->view = $view === null ? new ListmembersView() : $view;
-        $this->memberList = new MemberList();
+    public function __construct(ListmembersView $view, MemberList $memberList) {
+        $this->view = $view;
+        $this->memberList = $memberList;
     }
-    public function getHTML(){
-        if($this->view->getmemberID()){
-            $membernumber = $this->view->getmemberID();
-            $memberRepository = new MemberRepository();
 
-            $member = $memberRepository->getMemberByMemberNumber($membernumber);
+    public function getHTML() {
+        if ($this->view->getmemberID()) {
+            $membernumber = $this->view->getmemberID();
+
+            $member = $this->memberList->getmemberById($membernumber);
+
             return $this->view->getListmemberView($member);
         }
-        return $this->view->redirect();
 
-
+        $this->view->redirect();
     }
 }
 

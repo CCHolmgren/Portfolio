@@ -13,5 +13,9 @@ require_once(__ROOT__ . "/Model/MemberModel.php");
 require_once(__ROOT__ . "/View/ListMembersView.php");
 require_once(__ROOT__ . "/Controller/ListAllMembersController.php");
 
-$controller = new ListAllmembersController();
+$listMembersView = new ListmembersView();
+$memberRepository = new MemberRepository();
+$memberList = $memberRepository->getAllMembers();
+
+$controller = new ListAllmembersController($listMembersView, $memberList, $memberRepository);
 echo $controller->getHTML();

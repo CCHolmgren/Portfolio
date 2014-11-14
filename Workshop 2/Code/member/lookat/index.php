@@ -11,5 +11,8 @@ define("__ROOT__","C:/Users/Chrille/PhpstormProjects/Workshop_2");
 
 require_once(__ROOT__ . "/Controller/ListMemberController.php");
 
-$controller = new ListmemberController();
+$listMembersView = new ListmembersView();
+$memberList = (new MemberRepository())->getAllMembers();
+
+$controller = new ListmemberController($listMembersView, $memberList);
 echo $controller->getHTML();

@@ -104,7 +104,7 @@ class ListmembersView extends View{
      */
     public function boatListInfo(Member $member){
         $result = "";
-        $result .= "<a href='/labb2/member/boat/?memberid=$member->membernumber&method=".$this::ADD_METHOD_NAME."'>Add boat</a><br>";
+        $result .= "<a href='".$this->home."boat/?memberid=$member->membernumber&method=".$this::ADD_METHOD_NAME."'>Add boat</a><br>";
         $result .= "<table>
                         <thead>
                             <tr>
@@ -125,11 +125,11 @@ class ListmembersView extends View{
                         "</td>";
 
             $result .= "<td>
-                            <a href='/labb2/member/boat/?memberid=$member->membernumber&method=".$this::REMOVE_METHOD_NAME."&length={$boat->getLength()}&boattype={$boat->getBoatType()}'>
+                            <a href='".$this->home."boat/?memberid=$member->membernumber&method=".$this::REMOVE_METHOD_NAME."&length={$boat->getLength()}&boattype={$boat->getBoatType()}'>
                             Remove boat</a>
                         </td>";
             $result .= "<td>
-                            <a href='/labb2/member/boat/?memberid=$member->membernumber&method=".$this::EDIT_METHOD_NAME."&length={$boat->getLength()}&boattype={$boat->getBoatType()}'>
+                            <a href='".$this->home."boat/?memberid=$member->membernumber&method=".$this::EDIT_METHOD_NAME."&length={$boat->getLength()}&boattype={$boat->getBoatType()}'>
                             Change boat</a>
                         </td>";
             $result .= "</tr>";
@@ -155,9 +155,9 @@ class ListmembersView extends View{
         $result .= $this->boatListInfo($member);
         return $result;
     }
-    public function getListAllmembersView(){
-        $memberRepositoyr = new MemberRepository();
-        $allMembers = $memberRepositoyr->getAllMembers();
+    public function getListAllmembersView(MemberList $memberList){
+        //$memberRepositoyr = new MemberRepository();
+        $allMembers = $memberList->getmemberList();
         $result = "";
 
         $result .= "<p><a href='./add/'>Add new member</a></p>";

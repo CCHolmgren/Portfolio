@@ -12,5 +12,10 @@ define("__ROOT__","C:/Users/Chrille/PhpstormProjects/Workshop_2");
 require_once(__ROOT__ . "/Model/MemberModel.php");
 require_once(__ROOT__."/Controller/BoatController.php");
 
-$controller = new BoatController();
+$listMembersView = new ListmembersView();
+$memberList = new MemberList();
+
+$boatView = new BoatView($listMembersView,$memberList);
+
+$controller = new BoatController($boatView, $memberList);
 echo $controller->getHTML();

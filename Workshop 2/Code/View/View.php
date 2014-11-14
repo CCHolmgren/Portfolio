@@ -18,12 +18,18 @@ class View {
     public static $firstname = "firstname";
     public static $lastname = "lastname";
     public static $ssn = "ssn";
-
+    protected $home = "/labb2/member/";
+    public function __get($key){
+        $r = new ReflectionObject($this);
+        if($r->hasConstant($key)){
+            return $r->getConstant($key);
+        }
+    }
     public function getRequestMethod(){
         return $_SERVER["REQUEST_METHOD"];
     }
     public function redirect(){
-        header("Location: "."/labb2/member/");
+        header("Location: ".$this->home);
         exit;
     }
     public function getMethod(){

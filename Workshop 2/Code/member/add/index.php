@@ -13,5 +13,8 @@ require_once(__ROOT__ . "/Model/MemberModel.php");
 require_once(__ROOT__."/View/CreateView.php");
 require_once(__ROOT__ . "/Controller/AddMemberController.php");
 
-$controller = new AddmemberController();
+$createView = new CreateView();
+$memberList = (new MemberRepository())->getAllMembers();
+
+$controller = new AddmemberController($createView, $memberList);
 echo $controller->getHTML();

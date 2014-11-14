@@ -19,7 +19,7 @@ class MemberRepository{
             $memberList = unserialize($filecontents);
         }
         else {
-            $memberList = new MemberList(array());
+            $memberList = new MemberList();
         }
         return $memberList;
     }
@@ -47,15 +47,8 @@ class MemberRepository{
 class MemberList{
     private $members;
 
-    public function __construct(array $members=null){
-
-        if($members !== null) {
-            $this->members = $members;
-        }
-        else {
-            $mr = new MemberRepository();
-            $this->members = $mr->getAllMembers()->getmemberList();
-        }
+    public function __construct(array $members=[]){
+        $this->members = $members;
     }
 
     /**
@@ -140,6 +133,7 @@ class Member extends Model{
         $this->boats[] = $boat;
     }
     public function editBoat(Boat $oldBoatInfo, Boat $newBoatInfo){
+        /** @var Boat $value */
         foreach($this->boats as $key=>$value){
             if($value->getLength() === $oldBoatInfo->getLength() && $value->getBoatType() === $oldBoatInfo->getBoatType()){
                 unset($this->boats[$key]);
@@ -150,6 +144,7 @@ class Member extends Model{
         return false;
     }
     public function removeBoat(Boat $boat){
+        /** @var Boat $value */
         foreach($this->boats as $key=>$value){
             if($value->getLength() === $boat->getLength() && $value->getBoatType() === $boat->getBoatType()){
                 array_splice($this->boats,$key, 1);
