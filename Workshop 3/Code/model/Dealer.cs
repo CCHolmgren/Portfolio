@@ -9,14 +9,16 @@ namespace BlackJack.model
     {
         private Deck m_deck = null;
         private const int g_maxScore = 21;
+        private List<Observer> observers;
 
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
         private rules.IWinGameStrategy m_winRule;
 
 
-        public Dealer(rules.RulesFactory a_rulesFactory)
+        public Dealer(rules.RulesFactory a_rulesFactory, List<Observer> observerList)
         {
+            observers = observerList;
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
             m_winRule = a_rulesFactory.GetWinRule();
@@ -34,7 +36,7 @@ namespace BlackJack.model
             return false;
         }
 
-        public bool Hit(Player a_player, NewCardListener ncl)
+        public bool Hit(Player a_player)
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver(a_player))
             {
@@ -42,27 +44,25 @@ namespace BlackJack.model
                 c = m_deck.GetCard();
                 c.Show(true);
                 a_player.DealCard(c);*/
-                m_deck.DealCard(true, a_player);
-                ncl.CardWasDealt(a_player);
+                DealCard(true, a_player);
                 //Here we should have some sort of Observer notification
                 return true;
             }
             return false;
         }
 
+        public void DealCard (bool show, model.Player player) {
+            Card c = m_deck.GetCard();
+            c.Show(show);
+            player.DealCard(c);
+            foreach (var observer in observers) {
+                observer.CardWasDealt(player);
+            }
+            
+        }
         public bool IsDealerWinner(Player a_player)
         {
             return m_winRule.DidWin(this, a_player, g_maxScore);
-            /*
-            if (a_player.CalcScore() > g_maxScore)
-            {
-                return true;
-            }
-            else if (CalcScore() > g_maxScore)
-            {
-                return false;
-            }
-            return CalcScore() >= a_player.CalcScore();*/
         }
 
         public bool IsGameOver(Player a_player)
@@ -73,17 +73,15 @@ namespace BlackJack.model
             }
             return false;
         }
-        public void Stand(NewCardListener ncl)
+        public void Stand()
         {
             if (m_deck != null)
             {
                 ShowHand();
-                ncl.CardWasDealt(this);
             }
             while (m_hitRule.DoHit(this))
             {
-                m_deck.DealCard(true, this);
-                ncl.CardWasDealt(this);
+                DealCard(true, this);
                 //Here we should implement the Observer thingy also
             }
         }

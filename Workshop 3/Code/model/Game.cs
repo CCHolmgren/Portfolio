@@ -9,12 +9,10 @@ namespace BlackJack.model
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
-        private model.NewCardListener newCardListener;
 
-        public Game(NewCardListener ncl)
+        public Game(List<Observer> observerList)
         {
-            newCardListener = ncl;
-            m_dealer = new Dealer(new rules.RulesFactory());
+            m_dealer = new Dealer(new rules.RulesFactory(), observerList);
             m_player = new Player();
         }
 
@@ -35,12 +33,12 @@ namespace BlackJack.model
 
         public bool Hit()
         {
-            return m_dealer.Hit(m_player, newCardListener);
+            return m_dealer.Hit(m_player);
         }
 
         public bool Stand()
         {
-            m_dealer.Stand(newCardListener);
+            m_dealer.Stand();
             // TODO: Implement this according to Game_Stand.sequencediagram
             return true;
         }

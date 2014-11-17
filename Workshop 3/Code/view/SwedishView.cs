@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace BlackJack.view
 {
-    class SwedishView : IView, model.NewCardListener
+    class SwedishView : IView
     {
         private model.Game a_game;
         public void SetGame(model.Game game)
@@ -86,13 +86,6 @@ namespace BlackJack.view
             }
             System.Console.WriteLine("Poäng: {0}", a_score);
             System.Console.WriteLine("");
-        }
-        public void CardWasDealt(model.Player player)
-        {
-            Thread.Sleep(1000);
-            DisplayWelcomeMessage();
-            DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
         }
     }
 }
