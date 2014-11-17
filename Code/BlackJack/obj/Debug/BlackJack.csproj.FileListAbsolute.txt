@@ -2,4 +2,5 @@ C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\bin\Debug\BlackJack.exe
 C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\bin\Debug\BlackJack.pdb
 C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\obj\Debug\BlackJack.pdb
-C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\bin\Debug\BlackJack.exe.CodeAnalysisLog.xml
+C:\Users\Chrille\Desktop\Portfolio\Code\BlackJack\bin\Debug\BlackJack.exe.lastcodeanalysissucceeded

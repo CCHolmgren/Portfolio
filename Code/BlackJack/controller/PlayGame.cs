@@ -8,12 +8,12 @@ namespace BlackJack.controller
 {
     class PlayGame : model.Observer
     {
-        private model.Game a_game;
-        private view.IView a_view;
+        private model.Game game;
+        private view.IView view;
         public bool Play(model.Game a_game, view.IView a_view)
         {
-            this.a_game = a_game;
-            this.a_view = a_view;
+            this.game = a_game;
+            this.view = a_view;
             a_view.SetGame(a_game);
             DisplayMessages(a_game, a_view);
             
@@ -55,7 +55,7 @@ namespace BlackJack.controller
 
         public void CardWasDealt (model.Player player) {
             Thread.Sleep(1000);
-            DisplayMessages(a_game, a_view);
+            DisplayMessages(game, view);
         }
     }
 }

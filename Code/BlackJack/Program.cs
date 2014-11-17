@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlackJack
 {
-    class Program : model.Observer
+    class Program
     {
         static void Main(string[] args)
         {
