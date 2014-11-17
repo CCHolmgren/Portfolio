@@ -12,11 +12,11 @@ namespace BlackJack.model.rules
         {
             /*Card c;*/
 
-            a_deck.DealCard(true, a_player);
+            a_dealer.DealCard(true, a_player);
 
-            a_deck.DealCard(true, a_dealer);
+            a_dealer.DealCard(true, a_dealer);
 
-            a_deck.DealCard(true, a_player);
+            a_dealer.DealCard(true, a_player);
             
             /*c = a_deck.GetCard();
             c.Show(true);

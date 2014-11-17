@@ -76,10 +76,6 @@ namespace BlackJack.view
             }
             
         }
-        public void CardWasDealt(model.Player player)
-        {
-            Thread.Sleep(500);
-        }
         private model.Game a_game;
         public void SetGame(model.Game game)
         {

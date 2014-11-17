@@ -5,8 +5,8 @@ using System.Text;
 
 namespace BlackJack.model
 {
-    interface NewCardListener
+    interface Observer
     {
-        void CardWasDealt(model.Player player);
+        void CardWasDealt (model.Player player);
     }
 }

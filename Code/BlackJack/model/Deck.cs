@@ -54,12 +54,5 @@ namespace BlackJack.model
                 m_cards.Add(c);
             }
         }
-
-        public void DealCard(bool show, model.Player player)
-        {
-            Card c = GetCard();
-            c.Show(show);
-            player.DealCard(c);
-        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlackJack.view
 {
-    interface IView : model.NewCardListener
+    interface IView
     {
         void DisplayWelcomeMessage();
         int GetInput();

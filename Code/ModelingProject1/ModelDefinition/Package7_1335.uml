@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="3556e557-e650-40cb-a2d6-24eccf39a59f"
   name="controller"
@@ -69,6 +69,13 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <suppliersInternal>
+          <interfaceRealization
+            Id="e488f62d-8ba8-441b-9d41-d59bec2fdad1">
+            <interfaceMoniker
+              Id="63bb1640-2c81-45e8-97c9-284d82eb6357"
+              LastKnownName="Observer"
+              LastKnownLocation="Package1_1335.uml" />
+          </interfaceRealization>
           <dependency
             Id="faeae2ed-4439-49b2-b370-295b64c30beb">
             <interfaceMoniker
@@ -367,6 +374,30 @@
                       Id="a8bafed9-0e86-4979-8744-11050169e721"
                       LastKnownName="IView"
                       LastKnownLocation="Package6_1335.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fe9fc084-cc0d-4ed3-848c-c8f86f64b49e"
+            name="CardWasDealt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ed3bb521-888d-4dd4-b8d6-cd565f08bf01"
+                  name="player"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="97e688e1-c2ff-4b0d-aa13-2079b9439fb9"
+                      LastKnownName="Player"
+                      LastKnownLocation="Package1_1335.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

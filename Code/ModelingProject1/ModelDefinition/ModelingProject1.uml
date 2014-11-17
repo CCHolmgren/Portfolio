@@ -30,6 +30,13 @@
         LastKnownName="BlackJack"
         LastKnownLocation="Package_1335.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="02d2c21c-de07-40c9-8567-f536787445ee"
+        name="Observer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
