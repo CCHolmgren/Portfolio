@@ -74,15 +74,6 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <dependency
-            Id="ba04d715-5d3f-430a-abae-9eca63c03cf7">
-            <classMoniker
-              Id="97e688e1-c2ff-4b0d-aa13-2079b9439fb9"
-              LastKnownName="Player"
-              LastKnownLocation="Package1_1335.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="21443c1d-bdad-4158-bf7a-974e3659dc9b"
